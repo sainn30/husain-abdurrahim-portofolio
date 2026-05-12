@@ -110,3 +110,42 @@ if (themeButton) {
 }
 
 /*=============== SHOW MORE PROJECTS ===============*/
+/*=============== PAGE TRANSITION ===============*/
+window.addEventListener('load', () => {
+    const loader = document.getElementById('transition-loader')
+    const main = document.querySelector('.main')
+
+    if (loader) {
+        loader.classList.add('loader-hidden')
+    }
+    if (main) {
+        main.classList.add('main-visible')
+    }
+})
+
+const links = document.querySelectorAll('a')
+links.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href')
+        
+        // Only handle internal links that go to other pages (.html)
+        // Avoid fragments on the SAME page and external links
+        if (href && 
+            href.includes('.html') && 
+            !href.startsWith('http') && 
+            !link.hasAttribute('target') && 
+            !link.getAttribute('href').startsWith('#')) {
+            
+            e.preventDefault()
+            const main = document.querySelector('.main')
+            const loader = document.getElementById('transition-loader')
+            
+            if (main) main.classList.remove('main-visible')
+            if (loader) loader.classList.remove('loader-hidden')
+
+            setTimeout(() => {
+                window.location.href = href
+            }, 500)
+        }
+    })
+})
