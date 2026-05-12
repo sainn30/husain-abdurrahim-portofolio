@@ -120,8 +120,28 @@ window.addEventListener('load', () => {
     }
     if (main) {
         main.classList.add('main-visible')
+        // Initialize ScrollReveal after the page is visible to avoid conflicts
+        setTimeout(() => {
+            initScrollReveal()
+        }, 500)
     }
 })
+
+function initScrollReveal() {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+    })
+
+    sr.reveal(`.perfil, .contact__form`)
+    sr.reveal(`.info`, { origin: 'left', delay: 800 })
+    sr.reveal(`.about`, { origin: 'right', delay: 800 })
+    sr.reveal(`.skills`, { origin: 'left', delay: 1000 })
+
+    sr.reveal(`.projects__card, .services__card, .certificate__card, .experience__item`, { interval: 100 })
+}
 
 const links = document.querySelectorAll('a')
 links.forEach(link => {
@@ -129,7 +149,6 @@ links.forEach(link => {
         const href = link.getAttribute('href')
         
         // Only handle internal links that go to other pages (.html)
-        // Avoid fragments on the SAME page and external links
         if (href && 
             href.includes('.html') && 
             !href.startsWith('http') && 
