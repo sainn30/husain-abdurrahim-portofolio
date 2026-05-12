@@ -26,9 +26,9 @@
   --body-color: hsl(var(--hue), 100%, 1%);
   --container-color: hsl(var(--hue), 2%, 10%);
   --conic-gradient: conic-gradient(from 150deg at 50% 45%,
-                  hsl(var(--hue), 80%, 20%) 0deg,
-                  hsl(var(--hue), 80%, 48%) 140deg,
-                  hsl(var(--hue), 80%, 20%) 360deg);
+      hsl(var(--hue), 80%, 20%) 0deg,
+      hsl(var(--hue), 80%, 48%) 140deg,
+      hsl(var(--hue), 80%, 20%) 360deg);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -50,6 +50,52 @@
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+
+/*========== LIGHT THEME ==========*/
+body.light-theme {
+  --first-color: hsl(var(--hue), 80%, 45%);
+  --first-color-alt: hsl(var(--hue), 76%, 40%);
+  --white-color: hsl(0, 0%, 10%);
+  --black-color: hsl(0, 0%, 98%);
+  --text-color: hsl(var(--hue), 8%, 45%);
+  --body-color: hsl(var(--hue), 100%, 96%);
+  --container-color: hsl(0, 0%, 100%);
+  --conic-gradient: conic-gradient(from 150deg at 50% 45%,
+      hsl(var(--hue), 80%, 80%) 0deg,
+      hsl(var(--hue), 80%, 92%) 140deg,
+      hsl(var(--hue), 80%, 80%) 360deg);
+}
+
+.light-theme .nav {
+  background-color: hsla(0, 0%, 90%, .5);
+}
+
+.light-theme .perfil__data {
+  background-color: hsla(0, 0%, 98%, .7);
+  border: 2px solid hsla(0, 0%, 10%, .1);
+}
+
+.light-theme .projects__skills,
+.light-theme .certificate__skills {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.light-theme .button {
+  color: hsl(0, 0%, 98%);
+}
+
+.light-theme .button__black {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.light-theme .button__black:hover {
+  background-color: hsl(0, 0%, 30%);
+}
+
+.light-theme .scrollup {
+  background-color: hsla(0, 0%, 90%, .5);
+  color: var(--white-color);
 }
 
 /*========== Responsive typography ==========*/
@@ -87,6 +133,8 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--white-color);
+  transition: background-color .4s;
+  /* For smooth dark/light mode transition */
 }
 
 input,
@@ -96,9 +144,14 @@ textarea {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
+  transition: color .4s;
+  /* For smooth dark/light mode transition */
 }
 
 ul {
@@ -107,12 +160,31 @@ ul {
 
 a {
   text-decoration: none;
+  transition: color .4s;
+  /* For smooth dark/light mode transition */
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* For smooth dark/light mode transition */
+p,
+span,
+i,
+.nav,
+.perfil__data,
+.info,
+.about,
+.skills,
+.projects__card,
+.services__card,
+.certificate__card,
+.experience__data,
+.contact__input {
+  transition: background-color .4s, color .4s, border-color .4s;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -221,7 +293,7 @@ img {
 }
 
 /*===== INFO =====*/
-.info{
+.info {
   background-color: var(--container-color);
   padding: 2rem 1.5rem;
   border-radius: 2rem;
@@ -273,21 +345,21 @@ img {
 /*===== ABOUT =====*/
 .about {
   background-color: var(--container-color);
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 2rem;
 }
 
 .about__name {
   font-size: var(--normal-font-size);
   font-weight: var(--font-regular);
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 
 .about__social {
   display: flex;
   justify-content: center;
   column-gap: 1.5rem;
-  margin-block: 2rem;
+  margin-block: 1rem;
 }
 
 .about__link {
@@ -324,7 +396,7 @@ img {
 
 .about__note {
   font-size: var(--small-font-size);
-  margin-block: 1rem 2rem;
+  margin-block: .75rem 1.5rem;
 }
 
 .about .button {
@@ -410,9 +482,13 @@ img {
   overflow: hidden;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
+  height: 200px;
 }
 
 .projects__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform .4s;
 }
 
@@ -478,6 +554,39 @@ img {
 
 .projects__card:hover .projects__img {
   transform: scale(1.2);
+}
+
+.projects__header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.projects__header-container .section__title {
+  margin-bottom: 0;
+}
+
+.projects__see-all {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: color .4s;
+}
+
+.projects__see-all i {
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.projects__see-all:hover {
+  color: var(--first-color);
+}
+
+.projects__see-all:hover i {
+  transform: translateX(.25rem);
 }
 
 /*=============== SERVICES ===============*/
@@ -602,38 +711,109 @@ img {
 
 
 /*=============== EXPERIENCE ===============*/
-.experience__container {
-  row-gap: 2rem;
+.experience__header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.experience__card {
-  display: grid;
-  row-gap: 1rem;
+.experience__header-container .section__title {
+  margin-bottom: 0;
+}
+
+.experience__see-all {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: color .4s;
+}
+
+.experience__see-all i {
+  font-size: 1.5rem;
+  transition: transform .4s;
+}
+
+.experience__see-all:hover {
+  color: var(--first-color);
+}
+
+.experience__see-all:hover i {
+  transform: translateX(.25rem);
+}
+
+.experience__container-timeline {
+  position: relative;
+  row-gap: 3rem;
+  padding-left: 2rem;
+}
+
+.experience__container-timeline::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+}
+
+.experience__item {
+  position: relative;
+}
+
+.experience__dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -1.95rem;
+  top: 0.25rem;
+  border: 3px solid var(--body-color);
+  transition: background-color .4s;
+}
+
+.experience__content {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  transition: transform .4s, background-color .4s;
+}
+
+.experience__content:hover {
+  transform: translateX(0.5rem);
 }
 
 .experience__company {
   font-size: var(--h2-font-size);
-}
-
-.experience__data {
-  background-color: var(--container-color);
-  padding: 1.5rem;
-  border-radius: 1.5rem;
+  color: var(--first-color);
+  margin-bottom: 0.25rem;
 }
 
 .experience__profession {
   font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience__date {
   display: block;
   font-size: var(--small-font-size);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
 .experience__description {
   color: var(--text-color);
+  font-size: var(--small-font-size);
+}
+
+/* For smooth dark/light mode transition */
+.experience__content,
+.experience__dot {
+  transition: background-color .4s, transform .4s, border-color .4s;
 }
 
 /*=============== CONTACT ===============*/
@@ -657,7 +837,7 @@ img {
   color: var(--text-color);
 }
 
-.contact__input:autofill{
+.contact__input:autofill {
   transition: background-color 6000s color 6000s;
 }
 
@@ -711,7 +891,7 @@ img {
   color: var(--text-color);
 }
 
-.footer__social  {
+.footer__social {
   display: flex;
   justify-content: center;
   column-gap: 1.5rem;
@@ -945,6 +1125,10 @@ img {
     padding-bottom: 2rem;
   }
 
+  .projects__image {
+    height: 240px;
+  }
+
   .services__container {
     grid-template-columns: repeat(3, 368px);
     gap: 2rem;
@@ -1008,7 +1192,7 @@ img {
   }
 }
 
-@media  screen and (min-width: 1500px) {
+@media screen and (min-width: 1500px) {
   .nav {
     width: max-content;
     height: max-content;
@@ -1033,4 +1217,3 @@ img {
     right: 4rem;
   }
 }
-

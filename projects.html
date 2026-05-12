@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== FAVICON ===============-->
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>All Projects - Husain Abdurrahim</title>
+   <style>
+      .projects__header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 2rem;
+      }
+
+      .back__button {
+         display: inline-flex;
+         align-items: center;
+         column-gap: .5rem;
+         color: var(--white-color);
+         font-weight: var(--font-medium);
+         transition: color .4s;
+      }
+
+      .back__button i {
+         font-size: 1.5rem;
+      }
+
+      .back__button:hover {
+         color: var(--first-color);
+      }
+
+      .projects__all-title {
+         text-align: left;
+         margin-bottom: 0;
+      }
+   </style>
+</head>
+
+<body id="body">
+   <!--==================== NAV ====================-->
+   <nav class="nav">
+      <ul class="nav__list">
+         <li>
+            <a href="index.html#home" title="Home" class="nav__link">
+               <i class="ri-home-line"></i>
+            </a>
+         </li>
+         <li>
+            <a href="projects.html" title="Projects" class="nav__link active-link">
+               <i class="ri-folder-line"></i>
+            </a>
+         </li>
+         <li>
+            <a href="index.html#services" title="Services" class="nav__link">
+               <i class="ri-file-edit-line"></i>
+            </a>
+         </li>
+         <li>
+            <a href="index.html#certificate" title="Certificate" class="nav__link">
+               <i class="ri-award-line"></i>
+            </a>
+         </li>
+         <li>
+            <a href="index.html#experience" title="Experience" class="nav__link">
+               <i class="ri-honour-line"></i>
+            </a>
+         </li>
+         <li>
+            <a href="index.html#contact" title="Contact" class="nav__link">
+               <i class="ri-send-plane-line"></i>
+            </a>
+         </li>
+         <li>
+            <i class="ri-moon-line change-theme nav__link" id="theme-button" style="cursor: pointer;"></i>
+         </li>
+      </ul>
+   </nav>
+
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== PROJECTS ====================-->
+      <section class="projects section" id="projects">
+         <div class="container">
+            <div class="projects__header">
+               <h2 class="section__title projects__all-title">ALL PROJECTS</h2>
+               <a href="index.html#projects" class="back__button">
+                  <i class="ri-arrow-left-line"></i>
+                  <span>Back</span>
+               </a>
+            </div>
+
+            <div class="projects__container grid">
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/sain.company" target="_blank" class="projects__image">
+                     <img src="assets\img\Project\Portfolio-1.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Company Profile Website</h3>
+                     <p class="projects__description">
+                        A simple company profile website project highlighting key services and company details.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-html.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-css.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-javascript.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/sain.company" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/HASAN300809/quotes_app" target="_blank" class="projects__image">
+                     <img src="assets\img\Project\Portfolio-4.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Quotes App Website</h3>
+                     <p class="projects__description">
+                        A website offering access to the Al-Qur'an with translation and recitation features.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-php.svg" alt="image" class="projects__skill1">
+                        <img src="assets/img/skills-laravel.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-tailwind-css.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/HASAN300809/quotes_app" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/planify" target="_blank" class="projects__image">
+                     <img src="assets/img/Project/Planify.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Schedule Generator App</h3>
+                     <p class="projects__description">
+                        App to create a daily schedule automatically based on the classes you enter.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-flutter.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-dart.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-api.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/planify" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/sansain.store" target="_blank" class="projects__image">
+                     <img src="assets\img\Project\Portfolio-5.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">E-Commerce Website</h3>
+                     <p class="projects__description">
+                        The e-commerce website is a comprehensive online platform to facilitate online shopping for
+                        users.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-html.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-css.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-javascript.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/sansain.store" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/payrollservice" target="_blank" class="projects__image">
+                     <img src="assets\img\Project\Portfolio-8.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Payroll Service Website</h3>
+                     <p class="projects__description">
+                        The payroll system is an integrated platform to automate employee attendance management efficiently.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-php.svg" alt="image" class="projects__skill1">
+                        <img src="assets/img/skills-laravel.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-tailwind-css.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/payrollservice" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/attendo-flutter" target="_blank" class="projects__image">
+                     <img src="assets/img/Project/Attendo.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Attendance App</h3>
+                     <p class="projects__description">
+                        An application designed to simplify employee attendance tracking and leave management on the go.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-flutter.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-dart.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-mysql.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/attendo-flutter" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/e_library" target="_blank" class="projects__image">
+                     <img src="assets/img/Project/Portfolio-7.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">E-Library Website</h3>
+                     <p class="projects__description">
+                        A website for accessing and managing digital library resources for students and teachers.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-php.svg" alt="image" class="projects__skill1">
+                        <img src="assets/img/skills-laravel.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-mysql.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-tailwind-css.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/e_library" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/Al-Quran.API" target="_blank" class="projects__image">
+                     <img src="assets/img/Project/Portfolio-2.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">Al-Qur'an Website</h3>
+                     <p class="projects__description">
+                        A website offering access to the Al-Qur'an with translation and recitation features.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-php.svg" alt="image" class="projects__skill1">
+                        <img src="assets/img/skills-laravel.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-api.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/Al-Quran.API" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <a href="https://github.com/sainn30/qr_scanner" target="_blank" class="projects__image">
+                     <img src="assets/img/Project/Scanly.png" alt="image" class="projects__img">
+                  </a>
+
+                  <div class="projects__data">
+                     <h3 class="projects__name">QR Scanner App</h3>
+                     <p class="projects__description">
+                        A mobile tool to scan and generate QR codes instantly for seamless information sharing and access.
+                     </p>
+
+                     <div class="projects__skills">
+                        <img src="assets/img/skills-flutter.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-dart.svg" alt="image" class="projects__skill">
+                        <img src="assets/img/skills-api.svg" alt="image" class="projects__skill">
+                     </div>
+
+                     <a href="https://github.com/sainn30/qr_scanner" target="_blank" class="projects__button">
+                        <i class="ri-link"></i>
+                        <span>Visit Project</span>
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div class="footer__content grid">
+            <a href="index.html" class="footer__logo">Husain</a>
+
+            <ul class="footer__links">
+               <li>
+                  <a href="index.html#home" class="footer__link">Home</a>
+               </li>
+               <li>
+                  <a href="projects.html" class="footer__link">Projects</a>
+               </li>
+               <li>
+                  <a href="index.html#services" class="footer__link">Services</a>
+               </li>
+            </ul>
+         </div>
+
+         <div class="footer__social">
+            <a href="https://wa.me/6285781567068?text=Halo%20saya%20ingin%20bertanya" target="_blank"
+               class="footer__social-link">
+               <i class="ri-whatsapp-line"></i>
+            </a>
+
+            <a href="https://www.instagram.com/senhusain.abd/" target="_blank" class="footer__social-link">
+               <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/husain-abdurrahim-70298a340/" target="_blank"
+               class="footer__social-link">
+               <i class="ri-linkedin-box-line"></i>
+            </a>
+         </div>
+      </div>
+
+      <span class="footer__copy">
+         &#169; All Rights Reserved By Husain
+      </span>
+   </footer>
+
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>
